@@ -6,7 +6,7 @@
   //const { getVillains } = useAPI()
 
   const selectCard = () => {
-    console.log(`${props.villains.name} selected`)
+    console.log(`${props.villain.name} selected`)
   }
 
   const props = defineProps({
@@ -15,7 +15,7 @@
       required: true,
       default: () => {
         return {
-          villainId: '123',
+          villainID: '123',
           realName: 'John Doe',
           image: 'https://www.example.com'
         }
@@ -28,7 +28,7 @@
 </script>
 
 <template>
-  <RouterLink v-if="props.villain.villainID" :to="`/api/demons/${props.villain.villainID}`">
+  <RouterLink v-if="props.villain.villainID" :to="`/api/villains/${props.villain.villainID}`">
   <div class="card" @click="selectCard">
     <div class="card-image">
       <img :src="props.villain.image" alt="" srcset="" />

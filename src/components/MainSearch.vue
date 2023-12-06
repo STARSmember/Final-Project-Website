@@ -1,4 +1,3 @@
-
 <template>
     <div class="wrapper">
         <input type="text" placeholder="Search..." class="search" />

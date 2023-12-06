@@ -1,11 +1,12 @@
 import { ref } from 'vue'
 import axios from 'axios'
 
-const employees = ref([])
+const villains = ref([])
 const pages = ref(1)
 const loading = ref(false)
 const activePage = ref(1)
-const pageSize = ref(8)
+const pageSize = ref(12)
+const currentDemon = ref(null)
 
 const api = axios.create({
     baseURL: import.meta.env.VITE_API_URL,
@@ -15,26 +16,27 @@ const api = axios.create({
     },
 })
 
-const getEmployees = async () => {
+const getVillains = async () => {
     loading.value = true
-    const { data, headers } = await api.get('/api/employees', {
+    const { data, headers } = await api.get('/api/villains', {
         params: {
             page: activePage.value,
             size: pageSize.value,
         },
     })
-    employees.value = data
+    villains.value = data
     pages.value = Number(headers['x-total-pages']) || 1
     loading.value = false
 }
 
-const getDepartment = async (departmentId) => {
-    const { data } = await api.get(`/api/departments/${departmentId}`)
-    return data
+const fetchVillain = async (id) => {
+    const { data } = await api.get(`/api/villains/${id}`)
+    currentVillain.value = data
+    console.log(data)
 }
 
 const useAPI = () => {
-    return { employees, pages, activePage, loading, pageSize, getEmployees, getDepartment }
+    return { villains, pages, activePage, loading, pageSize, getVillains, fetchVillain, currentVillain}
 }
 
 export default useAPI

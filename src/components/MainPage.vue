@@ -7,17 +7,17 @@
 
   import useAPI from '@/composables/useAPI'
 
-  const { getEmployees, loading } = useAPI()
+  const { getVillains, loading } = useAPI()
 
   onMounted(async () => {
-    await getEmployees()
+    await getVillains()
   })
 </script>
 
 <template>
   <p v-if="loading">Loading...</p>
   <div v-else class="wrapper">
-    <MainSearch />
+    <!--<MainSearch />-->
     <MainCards />
     <MainPagination />
   </div>

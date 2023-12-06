@@ -4,14 +4,14 @@ import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import path from 'path'
 // https://vitejs.dev/config/
-export default defineConfig({ 
-  base: '/Vue-Company-Directory/',   // <---- added "base: /'Vue-Company-Directoy/" <-- don't forget the name inside single quotes
+export default defineConfig({
+  base: '/Final.Project.Website/',   // <---- added "base: /'Vue-Company-Directoy/" <-- don't forget the name inside single quotes
   plugins: [vue()],
-  resolve:{
+  resolve: {
     alias: {
-      '@': path.resolve(__dirname,'src'),
+      '@': path.resolve(__dirname, 'src'),
 
-    }, 
+    },
   },
 })
 

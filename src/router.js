@@ -25,7 +25,7 @@ import MainPage from '@/components/MainPage.vue'
 import LoginPage from '@/components/LoginPage.vue'
 import SettingsPage from '@/components/SettingsPage.vue'
 import NotFound from '@/components/NotFound.vue'
-//import HomePage from '@/views/HomePage.vue'
+import HomePage from '@/views/HomePage.vue'
 
 
 const routes = [

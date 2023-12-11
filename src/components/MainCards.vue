@@ -4,12 +4,12 @@
   import MainCardsSingle from '@/components/MainCardSingle.vue'
   import MainSearch from '@/components/MainSearch.vue'
   
-  const { demons } = useAPI()
+  const { villains } = useAPI()
   const search = ref('');
 
   const filteredList = computed(() => {
-  return demons.value.filter(demon =>
-    demon.name.toLowerCase().includes(search.value.toLowerCase())
+  return villains.value.filter(villain =>
+    villain.name.toLowerCase().includes(search.value.toLowerCase())
   );
 });
 
@@ -19,11 +19,11 @@
 <template>
   <input type="text" placeholder="Search..." class="search" v-model="search" />
 
-  <div class="sub-wrapper" v-if="demons">
+  <div class="sub-wrapper" v-if="villains">
 
     <Suspense>
 
-      <MainCardsSingle v-for="demon in filteredList" :key="demon.demonId" :demon="demon" />
+      <MainCardsSingle v-for="villain in filteredList" :key="villain.villainID" :villain="villain" />
       <template #fallback>
         <div>Loading...</div>
       </template>

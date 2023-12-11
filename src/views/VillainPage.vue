@@ -9,7 +9,7 @@ const { fetchVillain, currentVillain } = useAPI()
 
 const route = useRoute()
 
-const villains = ref('')
+const villain = ref('')
 onMounted(async () => {
     await fetchVillain(route.params.id)
     console.log(route.params.id)

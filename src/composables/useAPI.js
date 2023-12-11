@@ -6,7 +6,7 @@ const pages = ref(1)
 const loading = ref(false)
 const activePage = ref(1)
 const pageSize = ref(12)
-const currentDemon = ref(null)
+const currentVillain = ref(null)
 
 const api = axios.create({
     baseURL: import.meta.env.VITE_API_URL,

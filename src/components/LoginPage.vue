@@ -81,7 +81,7 @@ import {userAuth} from '@./composables/useAuth'
   <form class="login-form" @submit.prevent="logUserIn">
     <input v-model="username" type="text" placeholder="Username" />
     <input v-model="password" type="password" placeholder="Password" />
-    <button type="submit" class="bg-red-500 px-4 py-2">Log In</button>
+    <button type="submit" class="bg-green-500 px-4 py-2">Log In</button>
   </form>
 </template>
 

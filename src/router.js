@@ -13,7 +13,7 @@ const routes = [
   { path: '/login', name: 'Login', component: LoginPage },
   { path: '/settings', name: 'Settings', component: SettingsPage, meta: { requiresAuth: true } },
   { path: '/:pathMatch(.*)*', name: 'NotFound', component: NotFound },
-  { path: '/other', name: 'Other', component: () => import('@/view/OtherPage.vue') },
+  { path: '/other', name: 'Other', component: () => import('@/views/OtherPage.vue') },
   //{ path: '/api/villains/:id', name: 'Villain', component: () => import('/@views/VillainPage.vue')},
 ]
 

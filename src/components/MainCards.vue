@@ -9,7 +9,7 @@
 
   const filteredList = computed(() => {
   return villains.value.filter(villain =>
-    villain.name.toLowerCase().includes(search.value.toLowerCase())
+    villain.villainName.toLowerCase().includes(search.value.toLowerCase())
   );
 });
 

@@ -16,6 +16,7 @@
       default: () => {
         return {
           villainID: '123',
+          villainName: 'name',
           realName: 'John Doe',
           image: 'https://www.example.com'
         }
@@ -34,7 +35,7 @@
       <img :src="props.villain.image" alt="" srcset="" />
     </div>
     <div class="card-details">
-      <p class="card-details-name font-poppins">{{ props.villain.name }}</p>
+      <p class="card-details-name font-poppins">{{ props.villain.villainName }}</p>
 
     </div>
   </div>

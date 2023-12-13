@@ -9,7 +9,7 @@ import HomePage from '@/views/HomePage.vue'
 
 
 const routes = [
-  { path: '/Final-Project-Website/', name: 'Home', component: MainPage }, // <--- Change path name to "Final.Project.Website"
+  { path: '/final-project-website/', name: 'Home', component: MainPage }, // <--- Change path name to "Final.Project.Website"
   { path: '/login', name: 'Login', component: LoginPage },
   { path: '/settings', name: 'Settings', component: SettingsPage, meta: { requiresAuth: true } },
   { path: '/:pathMatch(.*)*', name: 'NotFound', component: NotFound },

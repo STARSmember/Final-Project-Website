@@ -26,9 +26,9 @@ onUnmounted(() => {
         <div v-if="currentVillain" class="flex flex-col items-center justify-center gap-6">
             <img class="p-8 h-64 w-64" 
               :src="currentVillain.image" 
-              :alt="currentVillain.villainName" />
+              :alt="currentVillain.name" />
             <h1 class="text-white-800 text-6xl font-bold">
-                {{ currentVillain.villainName }}
+                {{ currentVillain.name }}
             </h1>
 
         </div>
